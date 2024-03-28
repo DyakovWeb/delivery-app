@@ -2,6 +2,7 @@ import ReactDOM from "react-dom/client";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import { MainLayout } from "./layouts/MainLayout";
 import "./assets/styles/index.scss";
+import { ThemeProvider } from "./providers/ThemeProvider";
 
 const router = createBrowserRouter([
    {
@@ -10,10 +11,14 @@ const router = createBrowserRouter([
       children: [
          {
             path: "/",
-            element: <div>Home</div>,
+            element: <p>Home</p>,
          },
       ],
    },
 ]);
 
-ReactDOM.createRoot(document.getElementById("root")).render(<RouterProvider router={router} />);
+ReactDOM.createRoot(document.getElementById("root")).render(
+   <ThemeProvider>
+      <RouterProvider router={router} />
+   </ThemeProvider>
+);
