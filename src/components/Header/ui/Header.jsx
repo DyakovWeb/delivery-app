@@ -9,9 +9,8 @@ import { useTheme } from "@/hooks/useTheme";
 
 const Header = () => {
    const navigate = useNavigate();
-   const onClick = () => {
-      navigate("/");
-   };
+   const onClick = () => navigate("/");
+   
 
    const {toggleTheme} = useTheme();
 
@@ -30,7 +29,7 @@ const Header = () => {
                   <Icon Svg={ToggleIcon} clickable onClick={toggleThemeHandler} />
                   <Button border className={cls.button}>
                      <Icon Svg={CartIcon} />
-                     <span>0 Р</span>
+                     <span>0 &#8381;</span>
                   </Button>
                </div>
             </div>

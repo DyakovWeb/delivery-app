@@ -2,6 +2,8 @@ import { Outlet } from "react-router-dom";
 import cls from "./MainLayout.module.scss";
 import { Header } from "@/components/Header";
 import { useTheme } from "@/hooks/useTheme";
+import { Footer } from "@/components/Footer";
+
 
 const MainLayout = () => {
    const {theme} = useTheme()
@@ -17,7 +19,7 @@ const MainLayout = () => {
             </div>
          </main>
 
-         <p>Footer</p>
+         <Footer/>
       </div>
    );
 };

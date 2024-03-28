@@ -8,7 +8,7 @@
    margin: 0 auto;
 }
 .content {
-   height: var(--content-header);
+   height: var(--content-header--height);
    display: flex;
    align-items: center;
    justify-content: space-between;
@@ -26,8 +26,10 @@
 }
 
 .button {
-   min-height: 40px;
-   min-width: 89px;
+   padding: 0 16px;
+   height: 40px;
+   line-height: 40px;
+   border: 1px solid var(--icon-color);
    display: flex;
    align-items: center;
    justify-content: center;
